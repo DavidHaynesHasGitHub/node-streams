@@ -14,8 +14,7 @@ function getAndPrintHTML(options) {
           });
 
           response.on('end', function() {
-            console.log(allData)
-            console.log('stream complete');
+            console.log(allData);
           });
     });
 }

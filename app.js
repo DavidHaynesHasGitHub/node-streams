@@ -1,8 +1,8 @@
 var httpFunctions = require('./http-functions.js');
 
 var requestOptions = {
-    host: process.argv[2],
-    path: process.argv[3]
+  host: 'sytantris.github.io',
+  path: '/http-examples/step4.html'
 };
 
 function printHTML (html) {
