@@ -1,22 +1,20 @@
 var https = require('https');
 
 var requestOptions = {
-  host: 'example.com',
-  path: '/'
+  host: 'sytantris.github.io',
+  path: '/http-examples/step1.html'
 };
 
-getAndPrintHTMLChunks(response){
+ function getAndPrintHTML (response) {
 
-  response.on('data', function(){
-    console.log('end of stream')
-  })
-  response.setEncoding('utf8');
-    console.log(response)
-  })
+  var allData = ''
+  var requestOptions = options
 
-  response.on('end', function(){
-    console.log('end of stream')
-  })
-}
+    response.on('data', function(chunk) {
 
-https.request(requestOptions, getAndPrintHTMLChunks(response))
+        console.log(chunk.toString());
+
+      });
+};
+
+https.request(requestOptions, getAndPrintHTML).end();
